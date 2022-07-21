@@ -1,0 +1,45 @@
+{
+  "name": "express-common-libs",
+  "version": "1.0.0",
+  "description": "A simple library to implement standard libs that are used by express APIs",
+  "main": "src/index.js",
+  "private": false,
+  "scripts": {
+    "lint": "eslint src/**",
+    "lintfix": "eslint src/** --fix",
+    "test": "jest --config=tests/jest.config.js --ci --coverage"
+  },
+  "eslintIgnore": [
+    ".eslintrc.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obi-tec/express-common-libs.git"
+  },
+  "keywords": [
+    "express",
+    "common",
+    "axios",
+    "node-cache"
+  ],
+  "author": "Obi Tec",
+  "license": "Apache License",
+  "bugs": {
+    "url": "https://github.com/obi-tec/express-common-libs/issues"
+  },
+  "homepage": "https://github.com/obi-tec/express-common-libs#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.14.0",
+    "eslint-plugin-jest": "^26.0.0",
+    "jest": "^27.4.7",
+    "jest-extended": "^2.0.0",
+    "jest-junit": "^13.0.0"
+  },
+  "dependencies": {
+    "@obi-tec/logger-console": "^1.0.3",
+    "axios": "^0.27.2",
+    "node-cache": "^5.1.2"
+  }
+}
