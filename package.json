@@ -1,6 +1,6 @@
 {
   "name": "@obi-tec/express-common-libs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple library to implement standard libs that are used by express APIs",
   "main": "src/index.js",
   "private": false,

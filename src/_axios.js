@@ -1,5 +1,6 @@
 // dependencies
-const axios = require('axios');
+const axios                   = require('axios');
+const { CancelToken, Cancel } = require('axios');
 
 // helpers
 const logger = require('@obi-tec/logger-console');
@@ -66,5 +67,7 @@ instance.interceptors.response.use((response) => {
 });
 
 module.exports = {
-  default: instance
+  default: instance,
+  Cancel,
+  CancelToken
 };
