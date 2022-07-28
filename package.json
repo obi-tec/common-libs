@@ -1,6 +1,6 @@
 {
-  "name": "@obi-tec/express-common-libs",
-  "version": "1.0.2",
+  "name": "@obi-tec/common-libs",
+  "version": "1.0.3",
   "description": "A simple library to implement standard libs that are used by express APIs",
   "main": "src/index.js",
   "private": false,
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/obi-tec/express-common-libs.git"
+    "url": "git+https://github.com/obi-tec/common-libs.git"
   },
   "keywords": [
     "express",
@@ -25,9 +25,9 @@
   "author": "Obi Tec",
   "license": "Apache License",
   "bugs": {
-    "url": "https://github.com/obi-tec/express-common-libs/issues"
+    "url": "https://github.com/obi-tec/common-libs/issues"
   },
-  "homepage": "https://github.com/obi-tec/express-common-libs#readme",
+  "homepage": "https://github.com/obi-tec/common-libs#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "dotenv": "^16.0.0",

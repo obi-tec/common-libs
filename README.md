@@ -6,7 +6,7 @@
 
 <a name="description"></a>
 
-# Express Common Libs
+# Common Libs
 <p align="center">🚀 A simple library to implement standard libs that are used by express APIs</p>
 
 
@@ -24,9 +24,9 @@
 
 # Install
 ```bash
-npm install @obi-tec/express-common-libs
+npm install @obi-tec/common-libs
 ```
-See all tags clicking <a href="https://github.com/obi-tec/express-common-libs/tags"> here</a>.
+See all tags clicking <a href="https://github.com/obi-tec/common-libs/tags"> here</a>.
 
 <a name="usage"></a>
 
@@ -35,7 +35,7 @@ See all tags clicking <a href="https://github.com/obi-tec/express-common-libs/ta
 Implementation of axios library to log all sent requests and their respective duration.
 
 ```javascript
-const { axios } = require('@obi-tec/express-common-libs');
+const { axios } = require('@obi-tec/common-libs');
 
 const options = {};
 await axios.default.get(url, options);
@@ -44,7 +44,7 @@ await axios.default.get(url, options);
 Implementation of node-cache library to create a helper function to get and set.
 
 ```javascript
-const { cache } = require('@obi-tec/express-common-libs');
+const { cache } = require('@obi-tec/common-libs');
 const key = 'cache-key';
 cosnt ttl = 300; // 5 minutes
 
