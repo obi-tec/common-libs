@@ -38,7 +38,7 @@
     "jest-junit": "^13.0.0"
   },
   "dependencies": {
-    "@obi-tec/logger-console": "^1.0.3",
+    "@obi-tec/logger-console": "^1.0.4",
     "axios": "^0.27.2",
     "node-cache": "^5.1.2"
   }
