@@ -1,13 +1,17 @@
 {
   "name": "@obi-tec/common-libs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A simple library to implement standard libs that are used by express APIs",
   "main": "src/index.js",
   "private": false,
+  "type": "module",
   "scripts": {
     "lint": "eslint src/**",
     "lintfix": "eslint src/** --fix",
-    "test": "jest --config=tests/jest.config.js --ci --coverage"
+    "start": "node --watch src/index.js",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --injectGlobals false test/",
+    "test:dev": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --injectGlobals false --watchAll test/",
+    "test:debug": "node --experimental-vm-modules --inspect-brk node_modules/.bin/jest --runInBand --injectGlobals false --watchAll test/"
   },
   "eslintIgnore": [
     ".eslintrc.js"
@@ -29,17 +33,13 @@
   },
   "homepage": "https://github.com/obi-tec/common-libs#readme",
   "devDependencies": {
-    "@types/jest": "^27.4.0",
-    "dotenv": "^16.0.0",
     "eslint": "^8.14.0",
     "eslint-plugin-jest": "^26.0.0",
-    "jest": "^27.4.7",
-    "jest-extended": "^2.0.0",
-    "jest-junit": "^13.0.0"
+    "jest": "^29.6.4"
   },
   "dependencies": {
-    "@obi-tec/logger-console": "^1.0.4",
-    "axios": "^0.27.2",
+    "@obi-tec/logger-console": "^1.1.1",
+    "axios": "^1.6.0",
     "node-cache": "^5.1.2"
   }
 }

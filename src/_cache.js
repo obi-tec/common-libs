@@ -1,23 +1,29 @@
-// dependencies
-const NodeCache = require('node-cache');
+import NodeCache from 'node-cache';
 
 // private;
 if (typeof global._cache === 'undefined') {
   global._cache = new NodeCache();
 }
 
-module.exports.set = (key, valeu, ttl) => {
-  global._cache.set(key, valeu, Number(ttl));
+export const set = (key, value, ttl) => {
+  global._cache.set(key, value, Number(ttl));
 };
 
-module.exports.get = (key) => {
+export const get = (key) => {
   return global._cache.get(key);
 };
 
-module.exports.del = (key) => {
+export const del = (key) => {
   return global._cache.del(key);
 };
 
-module.exports.ttl = (key, ttl) => {
+export const ttl = (key, ttl) => {
   return global._cache.ttl(key, ttl);
+};
+
+export default {
+  set,
+  get,
+  del,
+  ttl
 };

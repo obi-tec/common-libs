@@ -1,9 +1,5 @@
-// dependencies
-const axios                   = require('axios');
-const { CancelToken, Cancel } = require('axios');
-
-// helpers
-const logger = require('@obi-tec/logger-console');
+import axios from 'axios';
+import logger from '@obi-tec/logger-console';
 
 // private
 const _logResponseSuccess = (response) => {
@@ -37,37 +33,37 @@ const _logResponseError = (error) => {
 };
 
 // instance of axios
-const instance = axios.default.create();
+const instance = axios.create();
 
 // Add a request interceptor
-instance.interceptors.request.use((config) => {
-  config.requestStartTime = Date.now();
-  return config;
-}, (error) => {
-  return Promise.reject(error);
-});
+instance.interceptors.request.use(
+  (config) => {
+    config.requestStartTime = Date.now();
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  });
 
 // Add a response interceptor
-instance.interceptors.response.use((response) => {
-  response.config.requestEndTime = Date.now();
-  _logResponseSuccess(response);
-  return response;
-}, (error) => {
-  if (error) {
-    if (error.config) {
-      error.config.requestEndTime = Date.now();
-    } else {
-      error.config = {
-        requestEndTime: Date.now()
-      };
+instance.interceptors.response.use(
+  (response) => {
+    response.config.requestEndTime = Date.now();
+    _logResponseSuccess(response);
+    return response;
+  },
+  (error) => {
+    if (error) {
+      if (error.config) {
+        error.config.requestEndTime = Date.now();
+      } else {
+        error.config = {
+          requestEndTime: Date.now()
+        };
+      }
+      _logResponseError(error);
     }
-    _logResponseError(error);
-  }
-  return Promise.reject(error);
-});
+    return Promise.reject(error);
+  });
 
-module.exports = {
-  default: instance,
-  Cancel,
-  CancelToken
-};
+export default instance;

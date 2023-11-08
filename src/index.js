@@ -1,7 +1,7 @@
-const axios = require('./_axios');
-const cache = require('./_cache');
+import axios from './_axios.js';
+import cache from './_cache.js';
 
-module.exports = {
+export {
   axios,
   cache
 };
