@@ -6,16 +6,13 @@
   "private": false,
   "type": "module",
   "scripts": {
-    "lint": "eslint src/**",
-    "lintfix": "eslint src/** --fix",
+    "lint": "eslint src/**/*.js",
+    "lintfix": "eslint src/**/*.js --fix",
     "start": "node --watch src/index.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --injectGlobals false test/",
     "test:dev": "NODE_OPTIONS=--experimental-vm-modules npx jest --runInBand --injectGlobals false --watchAll test/",
     "test:debug": "node --experimental-vm-modules --inspect-brk node_modules/.bin/jest --runInBand --injectGlobals false --watchAll test/"
   },
-  "eslintIgnore": [
-    ".eslintrc.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/obi-tec/common-libs.git"
