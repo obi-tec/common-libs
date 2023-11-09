@@ -1,6 +1,6 @@
-import { it, expect, describe, jest } from '@jest/globals';
-import {set, get, del, ttl} from  '../src/_cache.js';
-import NodeCache from 'node-cache';
+const { it, expect, describe, jest } = require('@jest/globals');
+const { set, get, del, ttl }         = require('../src/_cache');
+const NodeCache                      = require('node-cache');
 
 describe('Cache suit case', () => {
   it('should create a global instance of node cache when importing', () => {

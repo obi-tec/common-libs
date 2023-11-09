@@ -1,5 +1,5 @@
-import { it, expect, describe, jest } from '@jest/globals';
-import axios from '../src/_axios.js';
+const { it, expect, describe, jest } = require('@jest/globals');
+const axios                          = require('../src/_axios');
 
 describe('Axios test suit case', () => {
   it('should do a request', async () => {

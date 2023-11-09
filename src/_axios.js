@@ -1,5 +1,5 @@
-import axios from 'axios';
-import logger from '@obi-tec/logger-console';
+const axios  = require('axios');
+const logger = require('@obi-tec/logger-console');
 
 // private
 const _logResponseSuccess = (response) => {
@@ -33,7 +33,7 @@ const _logResponseError = (error) => {
 };
 
 // instance of axios
-const instance = axios.create();
+const instance = axios.default.create();
 
 // Add a request interceptor
 instance.interceptors.request.use(
@@ -66,4 +66,4 @@ instance.interceptors.response.use(
     return Promise.reject(error);
   });
 
-export default instance;
+module.exports = instance;
